@@ -17,3 +17,7 @@ Route::get('/', function () {
 Route::get('/info', function () {
     phpinfo();
 });
+
+Route::get('/react', function () {
+    return view('react');
+});
