@@ -16,3 +16,9 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::post('/comment/save', function (Request $request) {
+    // return ['response'=>'OK', 'success' => true];
+    return $request->all();
+});
