@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CommentController;
 use Illuminate\Http\Request;
 
 /*
@@ -18,7 +19,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
-Route::post('/comment/save', function (Request $request) {
-    // return ['response'=>'OK', 'success' => true];
-    return $request->all();
-});
+Route::post('/comment/save',[CommentController::class, 'store']);
+Route::get('/comment', [CommentController::class, 'index']);
